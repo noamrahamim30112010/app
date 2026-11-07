@@ -1,71 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:fillViewport="true">
+    android:background="#E3F2FD"
+    android:padding="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="20dp">
+        android:text="להיות ישראלי"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:id="@+id/ivPerson"
-            android:layout_width="match_parent"
-            android:layout_height="380dp"
-            android:background="@drawable/ronaldo"
-            android:scaleType="fitCenter"
-            android:contentDescription="Cristiano Ronaldo" />
+    <ImageView
+        android:id="@+id/ivFlag"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:src="@drawable/israel_flag"
+        android:scaleType="fitCenter"
+        android:contentDescription="דגל ישראל"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Cristiano Ronaldo"
-            android:textSize="28sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:layout_marginTop="15dp" />
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="ישראל היא הבית שלי"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ivFlag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tvSubtitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="מקור ההשראה שלי"
-            android:textSize="20sp"
-            android:textColor="#FFFFFF"
-            android:gravity="center"
-            android:layout_marginTop="8dp" />
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="מה מסמל עבורי את ישראל?"
+        android:textSize="21sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:gravity="right"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tvQuestion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="למה בחרתי בו?"
-            android:textSize="22sp"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:gravity="right"
-            android:layout_marginTop="25dp" />
+    <TextView
+        android:id="@+id/tvStory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="בשבילי להיות ישראלי זה לאהוב את המדינה, לבלות עם המשפחה והחברים ולעזור אחד לשני. אני אוהב את החופים, האוכל והאווירה המיוחדת בישראל. ישראל היא המקום שבו גדלתי והיא תמיד תהיה הבית שלי."
+        android:textSize="17sp"
+        android:textColor="#000000"
+        android:gravity="right"
+        android:lineSpacingExtra="6dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvQuestion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/tvStory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="בחרתי בכריסטיאנו רונאלדו כי הוא מעורר בי השראה בזכות ההתמדה, המשמעת וההשקעה שלו. הוא התחיל עם חלום גדול ועבד קשה כדי להפוך לאחד משחקני הכדורגל הטובים בעולם. אני לומד ממנו שאסור לוותר על החלומות שלנו ושצריך להאמין בעצמנו גם כשקשה."
-            android:textSize="17sp"
-            android:textColor="#FFFFFF"
-            android:gravity="right"
-            android:lineSpacingExtra="6dp"
-            android:layout_marginTop="12dp" />
+    <Button
+        android:id="@+id/btnIsrael"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="אני אוהב את ישראל"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#1565C0"
+        app:cornerRadius="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@id/tvStory"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    </LinearLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
